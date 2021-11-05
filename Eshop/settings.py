@@ -1,3 +1,5 @@
+import django_heroku
+
 """
 Django settings for Eshop project.
 
@@ -81,6 +83,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -134,3 +138,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = "/image/download/"
 MEDIA_ROOT = BASE_DIR
+
+
+django_heroku.settings(locals())
